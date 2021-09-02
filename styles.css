@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+* {
+  margin: 0;
+}
+
+:root {
+  /* ### Primary */
+  --blue-bright: hsl(245, 75%, 52%);
+  --blue-pale: hsl(225, 100%, 94%);
+  --white: white;
+  /* ### Neutral */
+  --blue-dark: hsl(223, 47%, 23%);
+  --blue-desat: hsl(224, 23%, 55%);
+  --blue-vpale: hsl(225, 100%, 98%);
+}
+
+h1,
+p,
+button,
+a {
+  font-family: "Red Hat Display";
+  text-align: center;
+}
+
+.card,
+img,
+button,
+.sum-plan {
+  border-radius: 0.5rem;
+}
+
+body {
+  background-color: var(--blue-pale);
+  background-position: 100% 25%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: url(./images/pattern-background-mobile.svg);
+  display: grid;
+  height: 100vh;
+  overflow: hidden;
+  place-items: center;
+  width: 100vw;
+}
+
+/* Styles from card layout */
+.card {
+  background-color: var(--blue-vpale);
+  box-shadow: var(--blue-pale) -1px 6px 20px 0px;
+  max-width: 350px;
+}
+
+/* Hero image */
+.hero-container img {
+  border-radius: 0.5rem 0.5rem 0 0;
+  width: 100%;
+}
+
+/* Summary container */
+.sum-container {
+  padding: 1.5rem;
+}
+.sum-container h1 {
+  margin-bottom: 1.5rem;
+}
+
+.sum-plan {
+  align-items: center;
+  background-color: var(--blue-vpale);
+  display: flex;
+  flex-flow: nowrap row;
+  justify-content: space-between;
+  margin: 0.8rem 0;
+  padding: 0.5rem;
+}
+.sum-plan a {
+  color: var(--blue-bright);
+  transition: all 150ms ease-in;
+}
+.sum-plan a:hover {
+  color: var(--blue-bright);
+  text-decoration: none;
+}
+.plan-price {
+  text-align: left;
+}
+
+/* Utilities */
+/* Buttons */
+.btn {
+  border: none;
+  height: 3em;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+.btn:hover {
+  cursor: pointer;
+}
+.primary {
+  background-color: var(--blue-bright);
+  box-shadow: var(--blue-desat) 0px 2px 8px 0;
+  color: var(--blue-pale);
+  transition: all 100ms ease-in;
+}
+.primary:hover {
+  background-color: var(--blue-desat);
+}
+.secondary {
+  background-color: var(--white);
+  color: var(--blue-desat);
+  transition: all 100ms ease-in;
+}
+.secondary:hover {
+  color: var(--blue-dark);
+}
+/* Copy options */
+.bold {
+  font-weight: 900;
+}
+.medium {
+  font-weight: 700;
+}
+.light {
+  font-weight: 500;
+}
+.prim-color {
+  color: var(--blue-dark);
+}
+.sec-color {
+  color: var(--blue-desat);
+}
+
+/* Change background image when desktop */
+@media (min-width: 768px) {
+  body {
+    background-image: url(./images/pattern-background-desktop.svg);
+  }
+}
